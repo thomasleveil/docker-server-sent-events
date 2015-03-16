@@ -65,6 +65,7 @@ def index():
 def debug():
     return "Currently %d subscriptions" % len(subscriptions)
 
+@app.route("/publish")
 @app.route("/publish/<data>")
 def publish(data=None):
     #Dummy data - pick up from request for real data
