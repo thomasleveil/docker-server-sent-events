@@ -11,4 +11,5 @@ RUN pip install -r requirements.txt
 
 COPY . /usr/src/app
 
+EXPOSE 80
 CMD [ "gunicorn", "--bind", "0.0.0.0:80", "server:app" ]
